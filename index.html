@@ -1,0 +1,176 @@
+<!--
+Simple single-file static website for:
+BUMDes Gembira Desa Gunungrejo
+Instructions: Save this file as index.html and upload to a GitHub repository. Enable GitHub Pages (Settings → Pages → Branch: main / root).
+
+Color theme: green
+-->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BUMDes Gembira — Desa Gunungrejo</title>
+  <meta name="description" content="BUMDes Gembira Desa Gunungrejo — Profil, usaha, berita, galeri, dan kontak.">
+  <style>
+    :root{--green:#2f9e44;--muted:#f4f6f8;--dark:#2b2b2b}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;color:var(--dark);line-height:1.5}
+    header{background:linear-gradient(90deg, rgba(47,158,68,1), rgba(35,125,54,1));color:#fff;padding:28px 16px}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .brand{font-weight:700;font-size:20px}
+    .nav-right{margin-left:auto}
+    .nav-right a{color:#fff;text-decoration:none;margin-left:12px;padding:8px 12px;border-radius:6px;background:rgba(255,255,255,0.06)}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+    .hero .lead{font-size:22px}
+    .card{background:#fff;border-radius:8px;padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+    h2{margin:0 0 12px}
+    .section{padding:28px 0}
+    .muted{color:#6b7280}
+    .btn{display:inline-block;background:var(--green);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none}
+    footer{background:#0f1724;color:#fff;padding:18px}
+    /* simple gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:6px}
+    /* news list */
+    .news-item{padding:12px;border-left:4px solid var(--green);background:linear-gradient(180deg, #fff,#fbfbfb);border-radius:6px}
+    /* responsive nav */
+    @media(min-width:720px){nav ul{display:flex;gap:10px;list-style:none;margin:0;padding:0}nav ul li a{color:#fff;text-decoration:none;padding:8px 10px}}
+    /* contact form styling */
+    label{display:block;font-weight:600;margin-bottom:6px}
+    input,textarea{width:100%;padding:10px;border-radius:6px;border:1px solid #e6e6e6}
+    .meta{font-size:14px;color:#6b7280}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">BUMDes Gembira — Gunungrejo</div>
+        <div class="nav-right">
+          <a href="#home">Beranda</a>
+          <a href="#profil">Profil</a>
+          <a href="#usaha">Usaha</a>
+          <a href="#berita">Berita</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#kontak">Kontak</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="section hero">
+      <div class="card">
+        <div style="display:flex;gap:14px;align-items:center">
+          <div style="flex:1">
+            <h1 style="margin:0 0 8px">BUMDes Gembira Desa Gunungrejo</h1>
+            <p class="lead muted">Mewujudkan BUMDes Gembira sebagai lembaga ekonomi desa yang mandiri, profesional, dan meningkatkan kesejahteraan masyarakat.</p>
+            <p class="meta">Alamat: Jl. Raya Gunungrejo - Klepu</p>
+            <p style="margin-top:10px"><a class="btn" href="#kontak">Hubungi Kami</a></p>
+          </div>
+          <div style="width:220px">
+            <img src="https://images.unsplash.com/photo-1540199544-7bff3f1c6c6b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="foto desa" style="width:100%;height:140px;object-fit:cover;border-radius:8px">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profil" class="section">
+      <div class="card">
+        <h2>Profil</h2>
+        <p><strong>Nama Lengkap:</strong> BUMDes Gembira Desa Gunungrejo, Kecamatan Sudimoro, Kabupaten Pacitan</p>
+        <p><strong>Visi:</strong> Mewujudkan BUMDes Gembira sebagai lembaga ekonomi desa yang mandiri, profesional, dan mampu meningkatkan kesejahteraan masyarakat Desa Gunungrejo.</p>
+        <p><strong>Misi singkat:</strong></p>
+        <ul>
+          <li>Mengembangkan usaha berbasis digital melalui layanan e-money.</li>
+          <li>Meningkatkan perekonomian desa melalui perdagangan dan penyediaan barang kebutuhan.</li>
+          <li>Menyediakan layanan persewaan molen untuk mendukung pembangunan infrastruktur desa.</li>
+          <li>Meningkatkan kualitas layanan dan transparansi dalam pengelolaan keuangan BUMDes.</li>
+          <li>Menjalin kemitraan strategis dengan berbagai pihak guna pengembangan usaha.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="usaha" class="section">
+      <div class="grid">
+        <div class="card">
+          <h2>Unit Usaha Utama</h2>
+          <p><strong>Bumdes Mart</strong></p>
+          <p class="muted">Toko kebutuhan sehari-hari desa, melayani pembelian grosir & eceran untuk mendukung warga.</p>
+        </div>
+        <div class="card">
+          <h2>Layanan Lainnya</h2>
+          <ul>
+            <li>Pengadaan & perdagangan barang kebutuhan desa</li>
+            <li>Penyewaan molen untuk pembangunan</li>
+            <li>Layanan e-money & digital pembayaran</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="berita" class="section">
+      <h2>Berita Desa & Pengumuman</h2>
+      <div class="grid">
+        <div class="news-item">
+          <h3 style="margin-top:0">Pelatihan UMKM Lokal</h3>
+          <p class="meta">12 Juli 2025 — BUMDes Gembira mengadakan pelatihan pemasaran digital untuk pelaku UMKM lokal.</p>
+        </div>
+        <div class="news-item">
+          <h3 style="margin-top:0">Layanan Persewaan Molen Siap Pakai</h3>
+          <p class="meta">5 Juli 2025 — Layanan molen kami siap membantu pembangunan infrastruktur desa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeri" class="section">
+      <h2>Galeri Produk</h2>
+      <div class="card">
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="produk 1">
+          <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="produk 2">
+          <img src="https://images.unsplash.com/photo-1529692236671-f1c1f2b1a4f2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="produk 3">
+          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="produk 4">
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section">
+      <div class="grid">
+        <div class="card">
+          <h2>Kontak</h2>
+          <p><strong>Email:</strong> <a href="mailto:bumdesgembiragunungrejo@gmail.com">bumdesgembiragunungrejo@gmail.com</a></p>
+          <p><strong>Alamat:</strong> Jl. Raya Gunungrejo - Klepu</p>
+          <p class="muted">Ingin bergabung atau bertanya? Kirimkan pesan melalui email di atas.</p>
+        </div>
+        <div class="card">
+          <h2>Form Kontak</h2>
+          <form action="#" onsubmit="alert('Terima kasih! Pesan dikirim. (Ini demo, belum terhubung ke server.)');return false;">
+            <label for="name">Nama</label>
+            <input id="name" placeholder="Nama Anda">
+            <label for="email">Email</label>
+            <input id="email" placeholder="email@contoh.com">
+            <label for="message">Pesan</label>
+            <textarea id="message" rows="4" placeholder="Tulis pesan..."></textarea>
+            <p style="margin-top:10px"><button class="btn">Kirim Pesan</button></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+        <div>© <strong>BUMDes Gembira</strong> — Desa Gunungrejo</div>
+        <div style="margin-left:auto" class="meta">Email: bumdesgembiragunungrejo@gmail.com</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
